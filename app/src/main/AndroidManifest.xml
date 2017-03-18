@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zhs.mycode">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".launcherActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity android:name=".okhttp.activity.OKHttpActivity" />
+        <activity android:name=".okhttp.activity.OKHttpListActivity" />
+        <activity android:name=".json.activity.NativeJsonPraseActivity" />
+        <activity android:name=".xutils.XUtils3MainActivity" />
+        <activity android:name=".xutils.annotation.FragmentXUtils3Activity" />
+        <activity android:name=".xutils.net.XUtils3NetActivity" />
+        <activity android:name=".recyclerview.RecyclerViewActivity"
+            android:theme="@style/listDividerTheme"></activity>
+    </application>
+
+</manifest>
